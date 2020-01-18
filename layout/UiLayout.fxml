@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+
+<AnchorPane maxWidth="320.0" minWidth="320.0" prefHeight="315.0" prefWidth="320.0" xmlns="http://javafx.com/javafx/8.0.101" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.echodrop.gameboy.ui.jfx.TsUiController">
+   <children>
+      <StackPane layoutY="1.0" minWidth="321.0" prefHeight="309.0" prefWidth="321.0">
+         <children>
+          <AnchorPane fx:id="displayPane" maxWidth="320.0" minHeight="0.0" minWidth="320.0" prefHeight="329.0" prefWidth="320.0">
+               <children>
+                  <Canvas fx:id="canvas" height="288.0" layoutY="26.0" width="320.0" />
+               </children>
+            </AnchorPane>
+            <MenuBar maxWidth="320.0" minWidth="320.0" StackPane.alignment="TOP_CENTER">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                        <MenuItem fx:id="loadRomMenuItem" mnemonicParsing="false" text="Load ROM" />
+                        <MenuItem fx:id="loadBootstrapMenuItem" mnemonicParsing="false" text="Load Bootstrap" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem fx:id="saveStateMenuItem" mnemonicParsing="false" text="Save Emulator State" />
+                        <MenuItem fx:id="loadStateMenuItem" mnemonicParsing="false" text="Load Emulator State" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                    <MenuItem fx:id="closeMenuItem" mnemonicParsing="false" text="Exit" />
+                  </items>
+                </Menu>
+                  <Menu mnemonicParsing="false" text="Run">
+                     <items>
+                        <MenuItem fx:id="startMenuItem" mnemonicParsing="false" text="Start" />
+                        <MenuItem fx:id="stopMenuItem" mnemonicParsing="false" text="Stop" />
+                        <MenuItem fx:id="resetMenuItem" mnemonicParsing="false" text="Reset" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="View">
+                    <items>
+                      <MenuItem fx:id="debuggerMenuItem" mnemonicParsing="false" text="Debugger" />
+                        <MenuItem mnemonicParsing="false" text="Color Palette" />
+                    </items>
+                  </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem fx:id="aboutMenuItem" mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>
